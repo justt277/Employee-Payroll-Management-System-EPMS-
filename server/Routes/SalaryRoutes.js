@@ -1,6 +1,6 @@
 import { createSalary, getSalaries, getSalary, updateSalary, deleteSalary } from "../Controllers/SalaryCont.js";
 import express from "express";
-
+//route for salary
 const salaryRouter = express.Router();
 
 salaryRouter.post('/add', createSalary);
