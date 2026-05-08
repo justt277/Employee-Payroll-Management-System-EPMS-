@@ -23,7 +23,7 @@ function EmployeePage() {
     <>
       <NavBar />
 
-      <div className="min-h-screen w-300 bg-linear-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center p-6">
+      <div className="min-h-screen w-400 bg-linear-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center p-6">
         
         {/* 🧾 FORM CARD */}
         <form

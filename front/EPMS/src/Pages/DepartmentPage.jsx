@@ -27,7 +27,7 @@ function DepartmentPage() {
   };
 
   return (
-    <div className=" min-h-screen w-300 bg-linear-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className=" min-h-screen w-400 bg-linear-to-br from-gray-900 via-gray-800 to-black text-white">
       <NavBar />
 
       <div className="flex justify-center items-center px-6 py-10">

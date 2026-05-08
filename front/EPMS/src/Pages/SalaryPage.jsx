@@ -69,7 +69,7 @@ function SalaryPage() {
   };
 
   return (
-    <div className="min-h-screen w-300 bg-linear-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen w-400 bg-linear-to-br from-gray-900 via-gray-800 to-black text-white">
       <NavBar />
 
       <div className="p-6 max-w-6xl mx-auto space-y-8">

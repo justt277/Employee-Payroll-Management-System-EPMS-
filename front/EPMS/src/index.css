@@ -2,7 +2,7 @@
 /* ===== FULL PAGE STAGE ===== */
 body {
   margin: 0;
-  background: #0b1220;
+  background: #ebeff5;
   min-height: 100vh;
 
   display: flex;
@@ -11,6 +11,7 @@ body {
 
   padding: 40px; /* 👈 creates space around emulator */
   box-sizing: border-box;
+  vi
 }
 
 /* ===== EMULATOR DEVICE ===== */

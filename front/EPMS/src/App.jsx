@@ -8,6 +8,7 @@ import Reports from './Pages/Report.jsx';
 import SignUp from "./Pages/SignUp.jsx";
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
 import FrontPage from "./Pages/FrontPage.jsx";
+import NotificationsPage from "./Pages/NotificationsPage.jsx";
 
 function App () {
   return (
@@ -34,6 +35,10 @@ function App () {
         <Route path="/reports" element={
           <ProtectedRoute> <Reports/></ProtectedRoute>
         }/>
+        <Route
+        path="/notifications"
+        element={<ProtectedRoute><NotificationsPage /></ProtectedRoute>}
+        />
       </Routes>
     </div>
   )

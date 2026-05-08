@@ -39,6 +39,9 @@ function SideBar() {
         <Link to="/reports" className={linkStyle("/reports")}>
           📄 Reports
         </Link>
+        <Link to="/notifications" className={linkStyle("/notifications")}>
+         🔔 Notifications
+        </Link>
       </nav>
     </div>
   );
