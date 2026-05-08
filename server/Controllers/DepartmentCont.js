@@ -31,8 +31,8 @@ const getDepartments = async (req, res ) => {
 //geta single department
 const getDepartment = async (req, res) => {
     try {
-        const { DepartmentCode} = req.params;
-        const getDepart = await DepartmentSchema.findOne({ DepartmentCode });
+        const { _id} = req.params;
+        const getDepart = await DepartmentSchema.findById(_id);
         if (!getDepart) {
             return res.status(404).json({ message: "Department not found" });
         }
@@ -46,9 +46,9 @@ const getDepartment = async (req, res) => {
 //update a department
 const updateDepartment = async (req, res) => {
     try {
-        const { DepartmentCode } = req.params;
+        const { _id } = req.params;
         const { DepartmentName, GrossSalary } = req.body;
-        const updateDepart = await DepartmentSchema.findOneAndUpdate({ DepartmentCode }, { DepartmentName , GrossSalary}, { new: true});
+        const updateDepart = await DepartmentSchema.findByIdAndUpdate(_id, { DepartmentName , GrossSalary}, { new: true});
         res.status(200).json(updateDepart);
 
     }
@@ -60,8 +60,8 @@ const updateDepartment = async (req, res) => {
 //delete a department
 const deleteDepartment = async (req, res) => {
     try {
-        const { DepartmentCode } = req.params;
-        const deleteDepart = await DepartmentSchema.findOneAndDelete( {DepartmentCode});
+        const { _id } = req.params;
+        const deleteDepart = await DepartmentSchema.findByIdAndDelete(_id);
         if (!deleteDepart) {
             return res.status(404).json({ message: "Department not found" });
         }

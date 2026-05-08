@@ -5,8 +5,8 @@ const salaryRouter = express.Router();
 
 salaryRouter.post('/add', createSalary);
 salaryRouter.get('/get', getSalaries);
-salaryRouter.get('/get/:month', getSalary);
-salaryRouter.put('/update/:month', updateSalary);
-salaryRouter.delete('/delete/:month', deleteSalary);
+salaryRouter.get('/get/:_id', getSalary);
+salaryRouter.patch('/update/:_id', updateSalary);
+salaryRouter.delete('/delete/:_id', deleteSalary);
 
 export default salaryRouter;

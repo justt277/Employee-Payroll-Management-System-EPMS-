@@ -5,8 +5,8 @@ const departmentRouter = express.Router()
 
 departmentRouter.post('/add', createDepartment);
 departmentRouter.get('/get', getDepartments);
-departmentRouter.get('/get/:DepartmentCode', getDepartment);
-departmentRouter.put('/update/:DepartmentCode', updateDepartment);
-departmentRouter.delete('/delete/:DepartmentCode', deleteDepartment);
+departmentRouter.get('/get/:_id', getDepartment);
+departmentRouter.put('/update/:_id', updateDepartment);
+departmentRouter.delete('/delete/:_id', deleteDepartment);
 
 export default departmentRouter;

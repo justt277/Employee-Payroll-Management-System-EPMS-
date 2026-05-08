@@ -33,8 +33,8 @@ const getEmployees = async (req, res) => {
 //get a single employee by employee number
 const getEmployee = async (req, res) => {
    try {
-    const { employeeNumber } = req.params;
-    const getEmploy = await EmployeeSchema.findOne({ employeeNumber });
+    const { _id } = req.params;
+    const getEmploy = await EmployeeSchema.findById(_id);
     if (!getEmploy) {
         return res.status(404).json({ message: "Employee not found" });
     }
@@ -48,9 +48,9 @@ const getEmployee = async (req, res) => {
 // update employee details
 const updateEmployee = async (req, res) => {
     try {
-        const { employeeNumber } = req.params;
+        const { _id } = req.params;
         const { FirstName, LastName, Position, Address, Telephone, Gender, hiredDate } = req.body;
-        const updateEmploy = await EmployeeSchema.findOneAndUpdate({ employeeNumber }, {
+        const updateEmploy = await EmployeeSchema.findByIdAndUpdate(_id, {
             FirstName,
             LastName,
             Position,
@@ -72,8 +72,8 @@ const updateEmployee = async (req, res) => {
 
 const deleteEmployee = async (req, res) => {
     try {
-        const { employeeNumber } = req.params;
-        const deleteEmploy = await EmployeeSchema.findOneAndDelete({ employeeNumber});
+        const { _id } = req.params;
+        const deleteEmploy = await EmployeeSchema.findByIdAndDelete(_id);
         if(!deleteEmploy) {
             return res.status(404).json({ message: "Employee not found" });
         }
