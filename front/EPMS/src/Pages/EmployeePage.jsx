@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createEmployee } from "../Api/EmployeeApi.js";
 import NavBar from "../Components/NavBar.jsx";
+import { useNotification } from "../context/NotificationContext";
 
 function EmployeePage() {
   const [form, setForm] = useState({});
@@ -8,12 +9,15 @@ function EmployeePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createEmployee(form);
+    addNotification(`Employee ${form.FirstName} added`, "success");
     alert("Employee added");
   };
 
   const handleChange = (field) => (e) => {
     setForm({ ...form, [field]: e.target.value });
   };
+
+  const { addNotification } = useNotification();
 
   return (
     <>

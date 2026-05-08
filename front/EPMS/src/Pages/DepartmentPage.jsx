@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { createDepartment } from "../Api/Department.js";
 import NavBar from "../Components/NavBar.jsx";
+import { useNotification } from "../context/NotificationContext";
 
 function DepartmentPage() {
   const [form, setForm] = useState({});
+
+  const { addNotification } = useNotification();
+  addNotification("Department created", "success");
 
   const handleSubmit = async (e) => {
     e.preventDefault();

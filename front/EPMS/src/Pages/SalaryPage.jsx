@@ -6,6 +6,7 @@ import {
   updateSalary
 } from "../Api/SalaryApi.js";
 import NavBar from "../Components/NavBar.jsx";
+import { useNotification } from "../context/NotificationContext";
 
 function SalaryPage() {
   const [salary, setSalary] = useState([]);
@@ -22,6 +23,8 @@ function SalaryPage() {
     setSalary(res.data);
   };
 
+  const { addNotification } = useNotification();
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -36,6 +39,7 @@ function SalaryPage() {
         TotalDeduction: Number(form.TotalDeduction),
         month: form.month,
     });
+    addNotification("Salary record added", "info");
     setForm({
         employee: "",
         department: "",

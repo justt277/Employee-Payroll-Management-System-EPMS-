@@ -22,16 +22,16 @@ function App () {
         <Route path="/Dashboard" element={
           <ProtectedRoute><Dashboard/></ProtectedRoute>
         }/>
-        <Route path="/Employee" element={
+        <Route path="/Employees" element={
           <ProtectedRoute><EmployeePage /></ProtectedRoute>
         }/>
-        <Route path="/Department" element={
+        <Route path="/Departments" element={
           <ProtectedRoute><DepartmentPage /></ProtectedRoute>
         }/>
         <Route path="/Salary" element={
           <ProtectedRoute>< SalaryPage/></ProtectedRoute>
         }/>
-        <Route path="/report" element={
+        <Route path="/reports" element={
           <ProtectedRoute> <Reports/></ProtectedRoute>
         }/>
       </Routes>
