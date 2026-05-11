@@ -9,7 +9,7 @@ function EmployeePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createEmployee(form);
-    addNotification(`Employee ${form.FirstName} added`, "success");
+    addNotification(`Employee ${form.FirstName} added`, "success💖");
     alert("Employee added");
   };
 
